@@ -11,7 +11,7 @@ app.use(cors()); // Enable CORS
 
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 
 // Serve HTML form
 app.get('/', (req, res) => {

@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-// Handle form submission
+// Handle form submission 
 app.post('/submit', (req, res) => {
   const { name, email, message } = req.body;
 

@@ -2,7 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config();  
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,14 +11,14 @@ app.use(cors()); // Enable CORS
 
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 
 // Serve HTML form
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-// Handle form submission 
+// Handle form submission
 app.post('/submit', (req, res) => {
   const { name, email, message } = req.body;
 
